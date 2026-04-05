@@ -35,5 +35,5 @@ Yes, I implemented **Hybrid Verification**.
 - **Interactive Charts:** Utilizing Recharts to visualize 7-day volatility for major pairs.
 - **Edge Functions:** Moving the aggregation logic to Vercel Edge to reduce latency for users in India.
 
-## 8. Final Thoughts (The Analyst Perspective)
+## 8. Final Thoughts 
 I know that a 0.1% discrepancy in a rate is the difference between a profit and a loss. While many developers focus on the "Look" of the app, I prioritized **Data Lineage and Source Transparency**. By telling the user exactly *where* the data came from and *when* it was verified, we solve the underlying "Trust Gap" that causes 98% of users to bounce.
