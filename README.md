@@ -1,87 +1,51 @@
-# Welcome to React Router!
+# Cactro Forex - High-Reliability Rate Aggregator
 
-A modern, production-ready template for building full-stack React applications using React Router.
+A production-ready currency exchange dashboard built with **React Router v7**. This project solves the "Trust Gap" for free-tier users by implementing a multi-source API waterfall and transparent data freshness indicators.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## 🚀 Live Demo
+**Deployment:** [Your Vercel URL Here]
 
-## Features
+## 🛠 Tech Stack
+- **Framework:** React Router v7 (Framework Mode)
+- **Runtime:** Node.js
+- **Styling:** CSS Modules (Scoped, zero-leakage styles)
+- **Architecture:** Server-only modules (`.server.ts`) for secure data fetching.
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+## 🌿 Branch Strategy
+- **`main`**: Production branch. Optimized for **Vercel** deployment with SSR enabled.
+- **`node`**: Local development branch. Used for testing the API waterfall logic and in-memory caching mechanisms in a standard Node.js environment.
 
-## Getting Started
+## ⚙️ Features
+- **3-Tier Waterfall:** Primary (Frankfurter) -> Fallback (Fawaz Ahmed CDN) -> Strategic Cache (LKG).
+- **Hydration-Safe UI:** Handles USA-to-India timezone differences without SSR mismatch errors.
+- **Trust Signals:** Dynamic status badges (Live/Delayed/Offline) and "Last Verified" local timestamps.
+- **Conversion Nudge:** Integrated CTA for 1-second real-time updates to drive $9/mo subscriptions.
+
+## 💻 Getting Started
 
 ### Installation
-
-Install the dependencies:
-
-```bash
-npm install
-```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/arkapratimc/cactro-5-4-2026.git
+   cd cactro-5-4-2026
+   ```
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
 
 ### Development
-
-Start the development server with HMR:
+To run the project locally in the Node environment:
 
 ```bash
+git checkout node
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
+### Production Build
+To test the production build locally:
 
 ```bash
 npm run build
+npm run start
 ```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
