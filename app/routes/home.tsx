@@ -13,7 +13,7 @@ export async function loader() {
 
 export function meta() {
   return [
-    { title: "USD to INR | Real-Time Forex Tracker" },
+    { title: "USD to INR, EUR and GBP | Real-Time Forex Tracker" },
     
   ];
 }
@@ -22,6 +22,12 @@ export function meta() {
 export default function CurrencyDashboard({ loaderData }: Route.ComponentProps) {
   const { rates, source, lastUpdated, fetchedAt, isPremium } = loaderData;
   const [localTime, setLocalTime] = useState("");
+
+  const pairs = [
+  { label: "USD / INR", value: rates.inr, symbol: "₹" },
+  { label: "USD / EUR", value: rates.eur, symbol: "€" },
+  { label: "USD / GBP", value: rates.gbp, symbol: "£" },
+];
 
   useEffect(() => {
     setLocalTime(new Date(fetchedAt).toLocaleTimeString());
@@ -40,10 +46,12 @@ export default function CurrencyDashboard({ loaderData }: Route.ComponentProps) 
       <p className={styles.clientTime}>Last verified at: {localTime || "--:--"}</p>
 
       <div className={styles.grid}>
-        <div className={styles.card}>
-          <span>USD/INR</span>
-          <div className={styles.rateValue}>₹{rates.inr.toFixed(2)}</div>
-        </div>
+        {pairs.map((pair) => (
+      <div key={pair.label} className={styles.card}>
+        <span>{pair.label}</span>
+        <div className={styles.rateValue}>{pair.symbol}{pair.value.toFixed(2)}</div>
+      </div>
+    ))}
       </div>
       {/* The Subtle Conversion Nudge */}
 <section className={styles.upgradeSection}>
