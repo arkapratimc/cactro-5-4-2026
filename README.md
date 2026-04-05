@@ -3,7 +3,7 @@
 A production-ready currency exchange dashboard built with **React Router v7**. This project solves the "Trust Gap" for free-tier users by implementing a multi-source API waterfall and transparent data freshness indicators.
 
 ## 🚀 Live Demo
-**Deployment:** [Your Vercel URL Here]
+**Deployment:** https://cactro-5-4-2026.vercel.app/
 
 ## 🛠 Tech Stack
 - **Framework:** React Router v7 (Framework Mode)
