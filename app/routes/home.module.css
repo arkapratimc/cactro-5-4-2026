@@ -1,0 +1,69 @@
+/* app/routes/home.module.css */
+.container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* Trust Signals: Dynamic Colors */
+.statusLive { background-color: #dcfce7; color: #166534; } /* Green */
+.statusDelayed { background-color: #fef9c3; color: #854d0e; } /* Yellow */
+.statusOffline { background-color: #fee2e2; color: #991b1b; } /* Red */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, min-minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.rateValue {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #111827;
+}
+
+
+.upgradeSection {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #f9fafb; /* Light gray background */
+  border-radius: 8px;
+  text-align: center;
+  border: 1px dashed #d1d5db;
+}
+
+.upgradeSection p {
+  margin: 0 0 0.5rem 0;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.upgradeLink {
+  color: #2563eb; /* Professional Blue */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.upgradeLink:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
